@@ -893,10 +893,11 @@ Tutte le collezioni implementano validazione JSON Schema per garantire integrit√
 
 ### Aree di Collaborazione LLM
 
-1. **Progettazione Schema**:
+1. **Progettazione**:
    - Analisi dei requisiti per la scelta tra embedding e reference
+   - Generazione Dati di esempio per la compilazione del DB
    - Validazione Schema JSON
-
+   
 2. **Implementazione Query**:
    - Gestione indici appropriati
 
