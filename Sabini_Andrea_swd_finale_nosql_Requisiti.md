@@ -886,77 +886,6 @@ Tutte le collezioni implementano validazione JSON Schema per garantire integrit�
 
 ---
 
-## Estensioni Possibili
-
-### Funzionalità Aggiuntive
-1. **Sistema Rating**: Recensioni clienti per piatti
-2. **Gestione Promozioni**: Sconti e offerte speciali
-3. **Tracking Consegne**: Stati dettagliati della consegna
-4. **Gestione Inventory**: Disponibilità ingredienti
-5. **Sistema Notifiche**: Aggiornamenti stato ordine
-
-### Ottimizzazioni Future
-1. **Sharding**: Partizionamento per scalabilità geografica
-2. **Time Series**: Collezioni separate per dati analitici
-3. **Caching**: Redis per dati frequentemente accessibili
-4. **Search**: MongoDB Atlas Search per ricerca full-text
-
----
-
-### Operazioni Comuni
-
-#### Aggiunta Nuovo Piatto
-```javascript
-db.dishes.insertOne({
-   name: "Risotto al Nero di Seppia",
-   description: "Risotto cremoso con nero di seppia",
-   price: 19.50,
-   category: "primo",
-   preparationTime: 30,
-   calories: 420,
-   isActive: true
-});
-```
-
-#### Registrazione Nuovo Cliente
-```javascript
-db.customers.insertOne({
-   firstName: "Anna",
-   lastName: "Verdi",
-   email: "anna.verdi@email.com",
-   registrationDate: new Date(),
-   addresses: [{
-      street: "Via Milano 456",
-      city: "Torino",
-      zipCode: "10100",
-      isDefault: true
-   }]
-});
-```
-
-#### Creazione Nuovo Ordine
-```javascript
-db.orders.insertOne({
-   customerId: ObjectId("..."),
-   creationDate: new Date(),
-   status: "in preparazione",
-   items: [{
-      dishId: ObjectId("..."),
-      dishName: "Risotto ai Funghi Porcini",
-      quantity: 2,
-      unitPrice: 18.50,
-      totalPrice: 37.00
-   }],
-   deliveryAddress: {
-      street: "Via Milano 456",
-      city: "Torino",
-      zipCode: "10100"
-   },
-   totalAmount: 37.00
-});
-```
----
-
 ## Utilizzo di LLM
 
 ### Dichiarazione di Utilizzo
@@ -965,17 +894,16 @@ db.orders.insertOne({
 ### Aree di Collaborazione LLM
 
 1. **Progettazione Schema**:
-   - Analisi dei requisiti per determinare embedding vs reference
-   - Definizione validazioni JSON Schema
+   - Analisi dei requisiti per la scelta tra embedding e reference
+   - Validazione Schema JSON
 
 2. **Implementazione Query**:
    - Gestione indici appropriati
 
 3. **Documentazione**:
-   - Strutturazione documentazione tecnica
+   - Strutturazione scala di documentazione tecnica
 
 4. **Best Practices**:
-   - Pattern MongoDB per applicazioni reali
    - Considerazioni di scalabilità
 
 ### Contributo Umano
@@ -994,7 +922,7 @@ db.orders.insertOne({
 
 ## Conclusioni
 
-Il sistema implementato fornisce una base solida e scalabile per la gestione di un servizio di consegna pasti. L'approccio ibrido embedding/reference offre il giusto equilibrio tra performance di lettura e flessibilità di gestione, mentre la validazione schema garantisce integrità dei dati.
+Il sistema implementato fornisce una base scalabile per la gestione di un servizio di consegna pasti. L'approccio ibrido embedding/reference offre il giusto equilibrio tra performance di lettura e flessibilità di gestione, mentre la validazione schema garantisce integrità dei dati.
 
 Le query implementate soddisfano tutti i requisiti richiesti e possono essere facilmente estese per funzionalità aggiuntive. 
 
