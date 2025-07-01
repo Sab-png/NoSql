@@ -1,5 +1,15 @@
 # REQUISITI
 
+## Panoramica del Sistema
+
+Il sistema di gestione per il servizio di consegna pasti è progettato per supportare le operazioni di un'azienda di cucine centralizzate che offre consegne a domicilio. Il database MongoDB `foodDeliveryDB` gestisce tre entità principali:
+
+- **Piatti**: Catalog dei prodotti disponibili
+- **Clienti**: Anagrafica clienti con indirizzi di consegna
+- **Ordini**: Gestione degli ordini con dettagli di consegna
+
+---
+
 ### **Piatti**
 Ogni piatto nel sistema deve contenere le seguenti informazioni:
 
@@ -497,16 +507,6 @@ db.system.profile.find().sort({ts: -1}).limit(5);
 ---
 
 # CONSEGNA FINALE
-
-## Panoramica del Sistema
-
-Il sistema di gestione per il servizio di consegna pasti è progettato per supportare le operazioni di un'azienda di cucine centralizzate che offre consegne a domicilio. Il database MongoDB `foodDeliveryDB` gestisce tre entità principali:
-
-- **Piatti**: Catalog dei prodotti disponibili
-- **Clienti**: Anagrafica clienti con indirizzi di consegna
-- **Ordini**: Gestione degli ordini con dettagli di consegna
-
----
 
 ## Modellazione del Database
 
