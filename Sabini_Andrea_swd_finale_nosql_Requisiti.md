@@ -1,4 +1,4 @@
-# Requisiti del Sistema - Servizio Consegna Pasti
+# Requisiti 
 
 ### **Piatti**
 Ogni piatto nel sistema deve contenere le seguenti informazioni:
@@ -89,21 +89,11 @@ Ogni ordine deve tracciare:
 
 ## Vincoli Tecnici
 
-### **Database**
-- Utilizzo di MongoDB come database documentale
-- Versione MongoDB 4.4 o superiore
-- Implementazione di validazione JSON Schema
-
 ### **Dati di Test**
 Il sistema deve essere popolato con dati rappresentativi:
 - **Minimo 5 clienti** con profili diversificati
 - **Minimo 10 piatti** di categorie diverse
 - **Minimo 3 ordini** in stati diversi
-
-### **Compatibilità**
-- Compatibilità con MongoDB Shell e driver ufficiali
-- Supporto per operazioni via MongoDB Compass
-- Esportabilità dati per backup e migrazione
 
 ---
 
@@ -134,44 +124,3 @@ Il sistema deve essere popolato con dati rappresentativi:
 4. Analisi performance categorie
 
 ---
-
-## Requisiti di Sicurezza
-
-### **Validazione Input**
-- Controllo formato email
-- Validazione range prezzi e quantità
-- Sanitizzazione campi di testo
-
-### **Integrità Referenziale**
-- Verifica esistenza clienti negli ordini
-- Controllo coerenza prezzi snapshot
-- Validazione stati ordine
-
-### **Audit Trail**
-- Tracciabilità modifiche importanti
-- Mantenimento storico prezzi
-- Log delle operazioni critiche
-
----
-
-## Estensibilità Futura
-
-Il sistema deve essere progettato per supportare facilmente:
-
-### **Funzionalità Aggiuntive**
-- Sistema di rating e recensioni
-- Gestione promozioni e sconti
-- Programmi fedeltà clienti
-- Gestione inventory ingredienti
-
-### **Integrazioni**
-- API per applicazioni mobile
-- Sistemi di pagamento esterni
-- Servizi di tracking consegne
-- Piattaforme di marketing
-
-### **Scalabilità Geografica**
-- Supporto multi-città
-- Gestione fusi orari
-- Localizzazione contenuti
-- Distribuzione geografica dati
